@@ -10,13 +10,23 @@ import { cn } from "../../../../../app/utils/cn";
 import { Spinner } from "../../../../components/Spinner";
 import emptyStateImage from '../../../../../assets/empty-state.svg'
 import { TransactionsTypeDropdown } from "./TransactionTypeDropdown";
+import { FilterModal } from "./FiltersModal";
 
 export function Transactions() {
-  const { areValuesVisible, isInitialLoading, transactions, isLoading } = useTransactionsController()
+  const {
+    areValuesVisible,
+    isInitialLoading,
+    transactions,
+    isLoading,
+    isFiltersModalOpen,
+    handleOpenFiltersModal,
+    handleCloseFiltersModal
+  } = useTransactionsController()
   const hasTransactions = transactions.length > 0
 
   return(
     <div className="bg-gray-100 rounded-2xl w-full h-full p-10 flex flex-col">
+
       {isInitialLoading && (
         <div className="w-full h-full flex items-center justify-center">
           <Spinner className="w-10 h-10"/>
@@ -25,11 +35,15 @@ export function Transactions() {
       }
       {!isInitialLoading && (
         <>
-          <header className="">
+          <FilterModal
+            open={isFiltersModalOpen}
+            onClose={handleCloseFiltersModal}
+          />
+          <header>
             <div className="flex items-center justify-between">
               <TransactionsTypeDropdown />
 
-              <button>
+              <button onClick={handleOpenFiltersModal}>
                 <FilterIcon/>
               </button>
             </div>
