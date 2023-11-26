@@ -19,7 +19,8 @@ export function Accounts() {
     areValuesVisible,
     isLoading,
     accounts,
-    openNewAccountModal
+    openNewAccountModal,
+    currentBalance
   } = useAccountsController()
 
   return (
@@ -42,7 +43,7 @@ export function Accounts() {
               !areValuesVisible && 'blur-md'
             )}
           >
-            {formatCurrency(1000)}
+            {formatCurrency(currentBalance)}
           </strong>
           <button
             className="w-8 h-8 flex items-center justify-center"
@@ -58,7 +59,7 @@ export function Accounts() {
           <>
             <div className="flex items-center justify-between mb-4" slot="container-start">
               <strong className="text-white tracking-[-1px] text-lg font-bold">
-                Minhas contas
+                Minhas contas {accounts.length}
               </strong>
             </div>
 
@@ -85,7 +86,7 @@ export function Accounts() {
                   isEnd: swiper.isEnd
                 })
               }}
-            >
+              >
               <div className="flex items-center justify-between mb-4" slot="container-start">
                 <strong className="text-white tracking-[-1px] text-lg font-bold">
                   Minhas contas
@@ -96,30 +97,16 @@ export function Accounts() {
                   isEnd={sliderState.isEnd}
                 />
               </div>
-                <SwiperSlide>
-                  <Accountcard
-                    color="#7950F2"
-                    name="Nubank"
-                    balance={1000.23}
-                    type="CASH"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Accountcard
-                    color="#333"
-                    name="XP"
-                    balance={1000.23}
-                    type="INVESTMENT"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Accountcard
-                    color="#0F0"
-                    name="Carteira"
-                    balance={1000.23}
-                    type="CASH"
-                  />
-                </SwiperSlide>
+                {accounts.map(account => (
+                  <SwiperSlide key={account.id}>
+                    <Accountcard
+                      color={account.color}
+                      name={account.name}
+                      balance={account.currentBalance}
+                      type={account.type}
+                    />
+                  </SwiperSlide>
+                ))}
             </Swiper>
           </div>
         )}
