@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EyeIcon } from "../../../../components/icons/EyeIcon";
-import { Accountcard } from "./AccountCard";
 
 import "swiper/css";
 import { useAccountsController } from "./useAccountsController";
@@ -9,6 +8,7 @@ import { formatCurrency } from "../../../../../app/utils/formatCurrency";
 import { cn } from "../../../../../app/utils/cn";
 import { Spinner } from "../../../../components/Spinner";
 import { PlusIcon } from "@radix-ui/react-icons";
+import { AccountCard } from "./AccountCard";
 
 export function Accounts() {
   const {
@@ -99,12 +99,7 @@ export function Accounts() {
               </div>
                 {accounts.map(account => (
                   <SwiperSlide key={account.id}>
-                    <Accountcard
-                      color={account.color}
-                      name={account.name}
-                      balance={account.currentBalance}
-                      type={account.type}
-                    />
+                    <AccountCard data={account}/>
                   </SwiperSlide>
                 ))}
             </Swiper>
