@@ -12,7 +12,7 @@ interface SelectProps {
     label: string
   }[]
   value?: string
-  onChange(value: string): void
+  onChange?(value: string): void
 }
 
 export function Select({ className, placeholder, options, error, onChange, value }: SelectProps) {
