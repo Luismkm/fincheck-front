@@ -1,6 +1,6 @@
 <div>
   <img style="margin-bottom:24px; width:600px;" src="https://ik.imagekit.io/meaid6cls2/www/fincheck/macboo-fincheck_9MJfs4JXK.png?updatedAt=1702513924766" />
-<img style="margin-bottom:24px; width:150px" src="https://ik.imagekit.io/meaid6cls2/www/fincheck/mobile-fincheck_qwCByddHF.png?updatedAt=1702515410902" />
+<img style="margin-bottom:24px; width:150px" src="https://ik.imagekit.io/meaid6cls2/www/fincheck/mobilefincheck_LFRf4DZ0F.png?updatedAt=1702517144638" />
 </div>
 
 ---
