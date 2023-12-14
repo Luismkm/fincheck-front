@@ -1,27 +1,35 @@
-# React + TypeScript + Vite
+<div>
+  <img style="margin-bottom:24px; width:600px;" src="https://ik.imagekit.io/meaid6cls2/www/fincheck/macboo-fincheck_9MJfs4JXK.png?updatedAt=1702513924766" />
+<img style="margin-bottom:24px; width:150px" src="https://ik.imagekit.io/meaid6cls2/www/fincheck/mobile-fincheck_qwCByddHF.png?updatedAt=1702515410902" />
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 📋 Sobre
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p>O projeto foi desenvolvido durante o evento Formação Dev promovido pela Cod3r.</p>
 
-## Expanding the ESLint configuration
+<p>A aplicação tem como objetivo auxiliar no controle financeiro, permitindo o registro e gerenciamento de receitas e despesas. Com ela, você poderá ter um controle mais eficiente das suas finanças, facilitando a visualização e análise dos seus gastos e ganhos.</p>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+<br />
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## 💻 Principais tecnologias utilizadas
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- React
+- React Query
+- Tailwindcss
+- Zod
+
+<br />
+
+## 🚀 Deploy
+
+<br />
+
+[Acessar Deploy](https://fincheck-luismkm.netlify.app/login)
+
+<br />
+<br />
+
+<p align="center" style="padding-top: 15px;">Feito com 💜 by <strong><a href="https://www.linkedin.com/in/luismkm/" target="_blank">Luis Moraes</a></strong> </p>
